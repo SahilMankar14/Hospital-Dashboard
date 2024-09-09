@@ -38,7 +38,14 @@ body {
 .main {
   grid-area: main;
   width: 100%;
+  height: 100%;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app-log-in {
+  grid-column: span 3;
 }
 
 /* Media query for tablets and smaller screens */
@@ -77,11 +84,7 @@ body {
   }
 }
 
-.app-log-in {
-  grid-column: span 3;
-}
-
-.app-header {
+/* .app-header {
   grid-area: header;
 }
 
@@ -93,4 +96,4 @@ body {
 
 .main {
   grid-area: main;
-}
+} */

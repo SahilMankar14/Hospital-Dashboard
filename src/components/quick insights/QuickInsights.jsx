@@ -11,7 +11,7 @@ import { columnsDataCheck } from "./columnsData";
 
 function QuickInsights() {
   return (
-    <div className="container">
+    <div className="quickinsight-container">
       {/* First Division */}
       <div className="first-division card">
         <CardComponent />
