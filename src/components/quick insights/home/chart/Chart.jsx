@@ -49,7 +49,7 @@ const Chart = () => {
     };
 
     fetchData();
-  }, [chartData]);
+  }, []);
 
   const handleClosePopover = () => {
     setShowPopover(false);

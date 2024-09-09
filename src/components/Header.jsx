@@ -8,6 +8,7 @@ import {
   LogoutOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { supabase } from "../supabaseClient";
 import "./Header.css";
 
@@ -102,9 +103,6 @@ const Header = ({ onLogout, onToggleSidebar }) => {
 
   return (
     <header className="header">
-      <div className="menu-icon" onClick={onToggleSidebar}>
-        <MenuOutlined />
-      </div>
       <div className="header-left">
         <button
           onClick={handleOpenReport}
@@ -116,6 +114,9 @@ const Header = ({ onLogout, onToggleSidebar }) => {
         {error && <p style={{ color: "red" }}>{error}</p>}
       </div>
       <div className="header-right">
+        <div className="menu-icon" onClick={onToggleSidebar}>
+          <RxHamburgerMenu size={18} />
+        </div>
         <Dropdown
           overlay={userMenu}
           trigger={["click"]}
@@ -123,7 +124,11 @@ const Header = ({ onLogout, onToggleSidebar }) => {
           onOpenChange={(open) => setMenuOpen(open)}
         >
           <div className="user-dropdown">
-            <img src={avatar} className="h-12 w-12 rounded-full" alt="avatar" />
+            <img
+              src={avatar}
+              className="w-9 h-9 lg:w-12 lg:h-12 rounded-full object-cover"
+              alt="avatar"
+            />
           </div>
         </Dropdown>
       </div>
