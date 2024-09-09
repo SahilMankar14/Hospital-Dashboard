@@ -1,0 +1,30 @@
+.centerwise-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    margin: 5px;
+    padding: 5px;
+    gap: 10px;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.centerwise-first-division {
+    height: auto;
+    grid-column: span 2;
+}
+
+.centerwise-second-division,
+.centerwise-third-division,
+.centerwise-fourth-division {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerwise-fourth-division {
+    grid-column: span 2;
+}

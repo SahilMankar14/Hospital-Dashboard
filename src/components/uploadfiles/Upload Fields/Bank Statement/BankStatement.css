@@ -1,0 +1,33 @@
+.upload-container-wrapper {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* .right-section {
+  padding: 20px;
+}
+
+.upload-dropzone {
+  width: 450px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+}
+
+.upload-dropzone.dragging {
+  background-color: #f0f0f0;
+}
+
+.upload-dropzone label {
+  cursor: pointer;
+}
+
+.upload-dropzone input[type="file"] {
+  display: none;
+} */

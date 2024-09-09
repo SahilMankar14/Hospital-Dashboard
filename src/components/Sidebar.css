@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap");
+
+#sidebar {
+  height: 100%;
+  background-color: #ffffff;
+  /* overflow-y: auto; */
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.sidebar-brand {
+  padding: 15px 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c5c5c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-list {
+  height: fit-content;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  display: flex;
+  align-items: center;
+  padding: 7px 20px;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+  /* border-bottom: 1px solid #e5e5e5; */
+  margin-bottom: 5px;
+}
+
+.icon {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #aeb3d1;
+  /* Adjust the space between icon and text */
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #aeb3d1;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.sidebar-list-item.active {
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+  display: flex; /* Ensure the link takes up the full width */
+  align-items: center;
+  width: 100%;
+}
+
+/* Add hover effect to icon */
+.sidebar-list-item.active .icon {
+  color: #0000ff;
+  /* Change to your desired blue color */
+}
+
+/* Add hover effect to text */
+.sidebar-list-item.active > a {
+  color: #1b1b1b;
+}
+
+/* Add a vertical line */
+.sidebar-list-item.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #0000ff;
+}
+
+/* Add transitions for a smooth effect */
+.sidebar-list-item.active .icon {
+  color: #0000ff;
+}
+.sidebar-list-item.active .text {
+  color: #000000;
+  font-size: 13px;
+  font-weight: bolder;
+  /* Change to your desired color */
+}
+
+/* Hide sidebar by default on mobile */
+@media (max-width: 1024px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 250px;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  .close-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 24px;
+    color: #333;
+  }
+}
+
+/* Hide close icon on larger screens */
+@media (min-width: 1025px) {
+  .close-icon {
+    display: none;
+  }
+}
+
+/* Hamburger menu icon only visible on mobile */
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

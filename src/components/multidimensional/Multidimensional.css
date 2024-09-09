@@ -1,0 +1,46 @@
+.multi-header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* Align buttons with space between them */
+  padding: 10px;
+}
+
+.separator {
+  border-top: 1px solid #ccc;
+}
+
+.multi-header button {
+  box-sizing: border-box;
+  padding: 4px 4px;
+  margin: 4px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.85em; /* Increase font size */
+  position: relative; /* Required for the underline */
+}
+
+.multi-header button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid transparent; /* Adjust the thickness of the underline */
+  transition: border-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.multi-header button:hover::after,
+.multi-header button.active::after {
+  border-color: rgb(105, 135, 201); /* Change the underline color */
+}
+
+/* Optional: Adjust the icon size */
+.multi-header button .svg-inline--fa {
+  font-size: 1.2em; /* Reduce the icon size */
+  height: 1em; /* Optional: Adjust the icon height */
+  width: 1em; /* Optional: Adjust the icon width */
+  margin-right: 5px; /* Adjust the space between icon and text */
+}

@@ -1,0 +1,10 @@
+
+.report-container-wrapper {
+  background: white;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 10px;
+  min-height: auto;
+  min-height: 100px; /* Adjust this value as needed */
+  }
+

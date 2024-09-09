@@ -1,0 +1,135 @@
+/* Home.css */
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.first-division {
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.second-division,
+.third-division {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.first-child-division {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.bar-chart {
+  min-height: 400px;
+  height: auto;
+  max-height: max-content;
+  overflow: auto;
+}
+
+.pie-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-list,
+.cal,
+.bar-chart,
+.pie-chart,
+.chart,
+.chart2 {
+  border-radius: 20px;
+  background-color: white;
+}
+
+.pie-chart > div {
+  flex-grow: 1;
+}
+
+/* Media Query for tablets and mobile screens */
+/* @media (max-width: 1024px) {
+  .container {
+    grid-template-rows: auto auto;
+  }
+
+  .second-division,
+  .third-division {
+    grid-template-columns: 1fr;
+  }
+
+  .pie-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-chart,
+  .check-list,
+  .chart2,
+  .cal {
+    height: auto;
+    width: 100%;
+  }
+} */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+
+  .bar-chart {
+    height: 300px;
+  }
+
+  .pie-charts {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Adjusting for smaller screens */
+  }
+
+  /* .third-division {
+    grid-template-columns: 1fr;
+  } */
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 4px;
+  }
+
+  .bar-chart {
+    height: 250px;
+  }
+
+  /* .second-division,
+  .third-division {
+    grid-template-columns: 1fr; 
+  } */
+
+  .pie-charts {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  /* .check-list,
+  .cal {
+    height: auto;
+  } */
+}

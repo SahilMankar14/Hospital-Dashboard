@@ -1,0 +1,26 @@
+.upload-container-wrapper {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 10px;
+  flex-direction: row;
+}
+
+
+
+.remark-container {
+  width: 100%; /* Adjust the width as needed */
+  border-color: black;
+}
+
+textarea {
+  width: 100%;  /*Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Make it round */
+  border: 1px solid #ccc; /* Example border */
+  outline: none; /* Remove outline */
+  resize: vertical; /* Allow vertical resizing */
+}
+

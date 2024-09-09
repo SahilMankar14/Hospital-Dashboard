@@ -1,0 +1,127 @@
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.brand-image {
+  width: 200px; /* Adjust the size as needed */
+  max-width: 100%;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite; /* Example animation */
+}
+
+.block1 {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-1 img {
+  width: 200px; /* Adjust the size as needed */
+  max-width: 100%;
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+.container-1 h1 {
+  font-size: 58px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.container-1 p {
+  font-size: 22px;
+  color: #000;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.auth-heading {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.auth-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 6px 12px;
+  margin: 8px 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.auth-button2 {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-button2:hover {
+  background-color: #0056b3;
+}
+
+.auth-alert {
+  font-size: 14px;
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+/* Add these styles to your existing CSS */
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add these styles to your existing CSS */
+
+.additional-image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Add these styles to your existing CSS */
+
+.additional-image {
+  width: 50%;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 2.4;
+  margin-top: 20px;
+
+  background-color: #f2f2f2; /* Light grey color */
+}
