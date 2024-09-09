@@ -49,7 +49,7 @@ body {
 }
 
 /* Media query for tablets and smaller screens */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: 200px 1fr;
     grid-template-rows: 0.2fr 3fr;
@@ -61,10 +61,11 @@ body {
   .app-sidebar {
     width: 200px;
   }
-}
+} */
 
 /* Media query for mobile screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px)  */
+@media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;

@@ -101,10 +101,8 @@
   }
 
   .pie-charts {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    ); /* Adjusting for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Adjusting for smaller screens */
   }
 
   /* .third-division {
