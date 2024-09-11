@@ -21,18 +21,8 @@ export const routes = [
   },
   { text: "Reports", path: "/reports", element: <Reports /> },
   { text: "Ledgers", path: "/ledgers", element: <Ledgers /> },
-  {
-    text: "Budgets/Projections",
-    path: "/budgets",
-    element: <BudgetsProjections />,
-  },
   { text: "Upload Files", path: "/upload-files", element: <UploadFiles /> },
   { text: "Documents", path: "/documents", element: <DocumentViewer /> },
-  {
-    text: "Compliance Board",
-    path: "/compliance-board",
-    element: <ComplianceBoard />,
-  },
   {
     text: "Billing System",
     path: "/billing-system",

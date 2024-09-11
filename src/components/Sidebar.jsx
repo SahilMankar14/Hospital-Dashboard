@@ -5,10 +5,8 @@ import {
   GlobalOutlined,
   BarChartOutlined,
   BookOutlined,
-  FileAddOutlined,
   FileTextOutlined,
   BellOutlined,
-  SafetyCertificateOutlined,
   MoneyCollectOutlined,
   CloseOutlined,
 } from "@ant-design/icons";
@@ -54,11 +52,9 @@ function Sidebar({ isOpen, onCloseSidebar }) {
                 {index === 1 && <GlobalOutlined />}
                 {index === 2 && <BarChartOutlined />}
                 {index === 3 && <BookOutlined />}
-                {index === 4 && <FileAddOutlined />}
-                {index === 5 && <FileTextOutlined />}
-                {index === 6 && <BellOutlined />}
-                {index === 7 && <SafetyCertificateOutlined />}
-                {index === 8 && <MoneyCollectOutlined />}
+                {index === 4 && <FileTextOutlined />}
+                {index === 5 && <BellOutlined />}
+                {index === 6 && <MoneyCollectOutlined />}
               </span>
               <span className="text">{item.text}</span>
             </Link>
