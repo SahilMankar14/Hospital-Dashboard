@@ -29,6 +29,7 @@ const LogIn = ({ onLoginUpdate }) => {
       } else {
         setMessage("Login Successful.");
         onLoginUpdate(true);
+        localStorage.setItem("isAuthenticated", "true");
         navigate("/quickinsights");
         // setAuthenticated(true);
       }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,12 +15,17 @@ function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  useEffect(() => {
+    // Check if the user is authenticated
+    const authStatus = localStorage.getItem("isAuthenticated") === "true";
+    setAuthenticated(authStatus);
+  });
+
   const updateAppState = (dataFromLogin) => {
     setAuthenticated(dataFromLogin);
-  };
-
-  const handleLogout = () => {
-    setAuthenticated(false);
+    if (!dataFromLogin) {
+      localStorage.removeItem("isAuthenticated"); // Clear authentication status on logout
+    }
   };
 
   const toggleSidebar = () => {
@@ -32,7 +37,7 @@ function App() {
       {isAuthenticated ? (
         <>
           <div className="app-header">
-            <Header onLogout={handleLogout} onToggleSidebar={toggleSidebar} />
+            <Header onToggleSidebar={toggleSidebar} />
           </div>
           <div className="app-sidebar">
             <Sidebar isOpen={isSidebarOpen} onCloseSidebar={toggleSidebar} />

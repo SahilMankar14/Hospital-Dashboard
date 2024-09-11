@@ -12,7 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { supabase } from "../supabaseClient";
 import "./Header.css";
 
-const Header = ({ onLogout, onToggleSidebar }) => {
+const Header = ({ onToggleSidebar }) => {
   const [reportName, setReportName] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSettingsModalVisible, setSettingsModalVisible] = useState(false);
@@ -79,6 +79,18 @@ const Header = ({ onLogout, onToggleSidebar }) => {
     setMenuOpen(false);
   };
 
+  const handleLogOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.error("Error logging out:", error.message);
+    } else {
+      console.log("Successfully logged out");
+      localStorage.removeItem("isAuthenticated");
+      // Optionally redirect the user or update the UI
+      window.location.href = "/"; // For example, redirect to login page
+    }
+  };
+
   const userMenu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="profile" icon={<UserOutlined />}>
@@ -88,7 +100,7 @@ const Header = ({ onLogout, onToggleSidebar }) => {
         Settings
       </Menu.Item>
       <Menu.Item key="logout" icon={<LogoutOutlined />}>
-        <button onClick={onLogout}>Logout</button>
+        <button onClick={handleLogOut}>Logout</button>
       </Menu.Item>
     </Menu>
   );
