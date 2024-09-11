@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 8px;
+  padding: 0 16px;
 }
 
 .menu-icon {
@@ -14,7 +14,7 @@
 }
 
 .header-left {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;

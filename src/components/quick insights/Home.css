@@ -92,10 +92,6 @@
 }*/
 
 @media (max-width: 768px) {
-  .quickinsight-container {
-    padding: 8px;
-  }
-
   .bar-chart {
     height: 300px;
   }
