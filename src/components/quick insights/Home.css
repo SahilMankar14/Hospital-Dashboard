@@ -36,9 +36,6 @@
 
 .bar-chart {
   min-height: 400px;
-  height: auto;
-  max-height: max-content;
-  overflow: auto;
 }
 
 .pie-charts {
@@ -108,7 +105,7 @@
 
 @media (max-width: 480px) {
   .quickinsight-container {
-    padding: 4px;
+    padding: 12px;
   }
 
   .bar-chart {

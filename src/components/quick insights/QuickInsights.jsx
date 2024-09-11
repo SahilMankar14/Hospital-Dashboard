@@ -21,7 +21,7 @@ function QuickInsights() {
       <div className="second-division">
         {/* First Child Division */}
         <div className="first-child-division">
-          <div className="bar-chart ">
+          <div className="h-full bar-chart ">
             <Chart />
           </div>
           <div className="pie-charts">
