@@ -2,10 +2,8 @@ import QuickInsights from "./components/quick insights/QuickInsights";
 import Multidimensional from "./components/multidimensional/Multidimensional";
 import Reports from "./components/reports/Reports";
 import Ledgers from "./components/ledgers/Ledgers";
-import BudgetsProjections from "./components/budgetsprojections/BudgetsProjections";
 import UploadFiles from "./components/uploadfiles/UploadFiles";
 import DocumentViewer from "./components/documents/DocumentViewer";
-import ComplianceBoard from "./components/complianceboard/ComplianceBoard";
 import BillingSystem from "./components/billing system/BillingSystem";
 
 export const routes = [
