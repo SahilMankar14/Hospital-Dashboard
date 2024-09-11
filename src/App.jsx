@@ -10,16 +10,34 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Login from "./components/LogIn";
 import { routes } from "./routes";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation(); // Get the current route
+  const navigate = useNavigate(); // For programmatic navigation
 
   useEffect(() => {
     // Check if the user is authenticated
     const authStatus = localStorage.getItem("isAuthenticated") === "true";
     setAuthenticated(authStatus);
-  });
+
+    // If the user is authenticated, navigate to the last visited page
+    if (authStatus) {
+      const lastVisitedPage = localStorage.getItem("lastVisitedPage");
+      if (lastVisitedPage) {
+        navigate(lastVisitedPage); // Navigate to the last visited page
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      // Save the current route to localStorage whenever it changes
+      localStorage.setItem("lastVisitedPage", location.pathname);
+    }
+  }, [location.pathname, isAuthenticated]); // Track route changes only when authenticated
 
   const updateAppState = (dataFromLogin) => {
     setAuthenticated(dataFromLogin);

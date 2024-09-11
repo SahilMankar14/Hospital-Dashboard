@@ -86,6 +86,7 @@ const Header = ({ onToggleSidebar }) => {
     } else {
       console.log("Successfully logged out");
       localStorage.removeItem("isAuthenticated");
+      localStorage.removeItem("lastVisitedPage");
       // Optionally redirect the user or update the UI
       window.location.href = "/"; // For example, redirect to login page
     }
