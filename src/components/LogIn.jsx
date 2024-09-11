@@ -102,11 +102,6 @@ const LogIn = ({ onLoginUpdate }) => {
             </a>
           </div>
         </form>
-        {/* <img
-          src={AdditionalImage}
-          alt="Additional Image"
-          className="additional-image"
-        /> */}
       </div>
     </div>
   );

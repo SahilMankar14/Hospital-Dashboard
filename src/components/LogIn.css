@@ -125,3 +125,77 @@
 
   background-color: #f2f2f2; /* Light grey color */
 }
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .block1 {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .container-1 h1 {
+    font-size: 36px;
+  }
+
+  .container-1 p {
+    font-size: 18px;
+  }
+
+  .auth-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .auth-heading {
+    font-size: 24px;
+  }
+
+  .auth-button2 {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .brand-image {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .block1 {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .container-1 h1 {
+    font-size: 28px;
+  }
+
+  .container-1 p {
+    font-size: 16px;
+  }
+
+  .auth-box {
+    padding: 15px;
+  }
+
+  .auth-input {
+    padding: 5px 10px;
+  }
+
+  .auth-button2 {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .brand-image {
+    width: 120px;
+  }
+}
