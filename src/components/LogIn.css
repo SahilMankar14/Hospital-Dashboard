@@ -164,7 +164,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .login-container {
     padding: 10px;
   }
@@ -183,7 +183,7 @@
   }
 
   .auth-box {
-    padding: 15px;
+    padding: 20px;
   }
 
   .auth-input {
