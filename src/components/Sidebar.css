@@ -116,11 +116,11 @@
   .close-icon {
     display: block;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
     z-index: 1001;
-    font-size: 24px;
+    font-size: 16px;
     color: #333;
   }
 }
