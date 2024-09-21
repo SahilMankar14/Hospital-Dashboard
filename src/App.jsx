@@ -4,13 +4,15 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation,
+  useNavigate,
 } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Login from "./components/LogIn";
 import { routes } from "./routes";
-import { useLocation, useNavigate } from "react-router-dom";
+import { supabase } from "./supabaseClient"; // Make sure to import supabase
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);
@@ -19,17 +21,7 @@ function App() {
   const navigate = useNavigate(); // For programmatic navigation
 
   useEffect(() => {
-    // Check if the user is authenticated
-    const authStatus = localStorage.getItem("isAuthenticated") === "true";
-    setAuthenticated(authStatus);
-
-    // If the user is authenticated, navigate to the last visited page
-    if (authStatus) {
-      const lastVisitedPage = localStorage.getItem("lastVisitedPage");
-      if (lastVisitedPage) {
-        navigate(lastVisitedPage); // Navigate to the last visited page
-      }
-    }
+    checkAuth();
   }, []);
 
   useEffect(() => {
@@ -39,11 +31,24 @@ function App() {
     }
   }, [location.pathname, isAuthenticated]); // Track route changes only when authenticated
 
+  const checkAuth = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+    if (session) {
+      setAuthenticated(true);
+      const lastVisitedPage = localStorage.getItem("lastVisitedPage");
+      if (lastVisitedPage) {
+        navigate(lastVisitedPage);
+      }
+    } else {
+      setAuthenticated(false);
+      localStorage.removeItem("lastVisitedPage");
+    }
+  };
+
   const updateAppState = (dataFromLogin) => {
     setAuthenticated(dataFromLogin);
-    if (!dataFromLogin) {
-      localStorage.removeItem("isAuthenticated"); // Clear authentication status on logout
-    }
   };
 
   const toggleSidebar = () => {
