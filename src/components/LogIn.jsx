@@ -1,10 +1,8 @@
-// Import the necessary libraries and styles
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 import "./LogIn.css";
 import BrandImage from "../assets/fin.png";
-// import AdditionalImage from "../assets/logca.png"; // Replace with the path to your additional image
 
 const LogIn = ({ onLoginUpdate }) => {
   const [formData, setFormData] = useState({ email: "", password: "" });

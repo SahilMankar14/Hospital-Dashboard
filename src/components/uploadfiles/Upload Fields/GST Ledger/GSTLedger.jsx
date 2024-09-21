@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./GSTLedger.css";
 import { FaBook } from "react-icons/fa";
-import FileUploader from "../../FileUploader";
 import SupabaseS3FileUpload from "../../SupabaseS3FileUpload";
 
 const GSTLedger = ({ files, clearFile, userName, onDataChange, data }) => {

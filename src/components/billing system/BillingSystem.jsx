@@ -4,18 +4,16 @@ import DoctorMasterForm from "./Forms/DoctorMasterForm";
 import BillingForm from "./Forms/BillingForm";
 import OperatorMasterForm from "./Forms/OperatorMasterForm";
 import PanelMasterForm from "./Forms/PanelMasterForm";
-import { supabase } from "../../supabaseClient";
-import axios from "axios";
 import useCompanyData from "../../hooks/useCompanyData";
 
 const BillingSystem = () => {
   const [selectedForm, setSelectedForm] = useState("PatientMasterForm");
-  const [companyId, setCompanyId] = useState(null);
+  const [companyId, setCompanyId] = useState(1);
   const { companies, userEmail, error } = useCompanyData();
 
   useEffect(() => {
-    console.log("Company id:", companies[0].company_id);
-    setCompanyId(companies[0].company_id);
+    // console.log("Company id:", companies[0].company_id);
+    // setCompanyId(companies[0].company_id);
   }, []);
 
   const handleChange = (event) => {
@@ -28,7 +26,7 @@ const BillingSystem = () => {
         className="dropdown"
         style={{
           position: "absolute",
-          top: "60px",
+          top: "80px",
           right: "10px",
           padding: "8px",
           border: "1px solid #ccc",
@@ -50,7 +48,6 @@ const BillingSystem = () => {
         </select>
       </div>
       <div className="master-form" style={{ marginTop: "10px" }}>
-        {" "}
         {/* Added margin top */}
         {selectedForm === "PatientMasterForm" && (
           <PatientMasterForm companyId={companyId} />
